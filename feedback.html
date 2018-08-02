@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>feedback</title>
+	<link rel="stylesheet" href="./css/stile.css">
+</head>
+<body>
+	<form id="feedback" class="feedback" name="feedback" action="" method="post">
+        <button  class="feedback__close"><a id="close" href="#"><img src="img/close.png" alt="close"></a></button>
+        <h2 class="feedback__title">ОБРАТНАЯ СВЯЗЬ</h2>
+        <label class="feedback__label" for="">Ваше имя*</label><input class="feedback__input" class="input" name="name" type="text" required /><br>
+        <label class="feedback__label" for="">Телефон*</label><input class="feedback__input" class="input" name="name" type="text" required/><br>
+        <label class="feedback__label" for="">Email*</label><input class="feedback__input" class="input" name="email" type="text" required/><br> 
+        <label class="feedback__label" for="">Сообщение</label>
+        <textarea class="feedback__textarea" name="body" cols="15" rows="8" /></textarea><br>
+        <input id="submit" value="ОТПРАВИТЬ" type="submit" />
+    </form>
+    <script type="text/javascript">
+	function closeModal() {
+    $.feedback__close.close();
+	}	
+</script>
+</body>
+</html>
