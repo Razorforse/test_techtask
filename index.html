@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>testproject</title>
 </head>
-<body id="body">
-    <header class="header">
-        <div class="logo">
+<body>
+    <header id="header" class="header">
+        <div class="header__logo">
             <img class="logo__img" src="./img/header__logo.png" alt="header__logo">
         </div>
         <div class="contacts">
@@ -19,7 +19,7 @@
             <a class="contacts__submit" href="#">Обратная связь</a>
         </div>  
     </header>
-    <menu class="menu">
+    <menu id="menu" class="menu">
         <ul class="navbar">
             <li class="navbar__item">
                 <a class="navbar__link" href="#">Главная</a>
@@ -38,7 +38,7 @@
             </li>
         </ul>
     </menu>
-    <div class="slider container-fluid">
+    <div id="slider" class="slider container-fluid">
         <div id="carousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -62,7 +62,7 @@
           </a>
         </div>
     </div>
-    <section class="main-content">
+    <section id="main-content" class="main-content">
             
             <ul class="main-nav">
                 <li class="main-nav__item">
@@ -172,7 +172,7 @@
                     </div>
             </div>
     </section>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="copyright">
             <p class="copyright__item">© 2012–2016 ЗАО «Компания»</p>
             <p class="copyright__item">info@name.ru</p>
@@ -205,13 +205,11 @@
         <h2 class="feedback__title">ОБРАТНАЯ СВЯЗЬ</h2>
         <label class="feedback__label" for="">Ваше имя*</label><input class="feedback__input" class="input" name="name" type="text" /><br>
         <label class="feedback__label" for="">Телефон*</label><input class="feedback__input" class="input" name="name" type="text" /><br>
-        <label class="feedback__label" for="">Email*</label><input class="feedback__input" class="input" name="email" type="text" required  /><br> 
+        <label class="feedback__label" for="">Email*</label><input class="feedback__input" class="input" name="email" type="text" required/><br> 
         <label class="feedback__label" for="">Сообщение</label>
         <textarea class="feedback__textarea" name="body" cols="15" rows="8" /></textarea><br>
-        <input id="submit" value="ОТПРАВИТЬ" type="submit" />
+        <input onclick="submit()" id="submit" value="ОТПРАВИТЬ" type="submit" />
     </form>
-</head>
-<body>
     <script src="js/index.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>

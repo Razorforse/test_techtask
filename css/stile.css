@@ -5,6 +5,7 @@ body {
 	padding: 0;
 	min-width: 240px;
 	max-width: 1400px;
+	height: 100%;
 	font-family: 'PT Sans', sans-serif;
 }
 
@@ -14,6 +15,14 @@ ul {
 
 a {
 	text-decoration: none;
+}
+
+#header,
+#slider,
+#menu,
+#main-content,
+#footer {
+	opacity: 0.3;
 }
 
 .product__link:hover,
@@ -44,7 +53,7 @@ hr {
 	align-items: center;
 }
 
-.logo {
+.header__logo {
 	margin-left: 200px;
 	padding: 10px;
 }
@@ -87,6 +96,7 @@ hr {
 	font-size: 30px;
 	margin:0;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .navbar__item {
@@ -105,18 +115,25 @@ hr {
 
 .slider {
 	width: 100%;
-	height: 470px;
+	height: auto;
 	background-color: #f8f8f8;
 }
 
 .main-content {
 	width: 100%;
-	height: 1385px;
+	height: 1400px;
 	background-color: #ffff;
 	max-width: 1000px;
 	margin-left: 200px;
 	margin-right: 200px;
 	display: flex;
+	flex-wrap: wrap;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	-o-flex: 1;
+	flex: 1;
+	overflow: auto;
 }
 
 .main-nav {
@@ -189,6 +206,7 @@ hr {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
+	flex: 1;
 }
 
 .product-content__item {
@@ -270,6 +288,8 @@ hr {
 	font-size: 14px;
 	display: flex;
 	justify-content:flex-start;
+	position: relative;
+   	bottom: 0;
 }
 
 .copyright {
@@ -290,7 +310,7 @@ hr {
 	padding: 5px;
 }
 
-.footer-navbar a {
+.footer-navbar__link {
 	text-decoration: underline;
 	color: #bbbbbb;
 }
@@ -304,7 +324,7 @@ hr {
 }
 
 .footer-logo__title {
-	line-height: normal;
+	line-height: normal;		
 	margin: 0;
 	padding: 0 10px;
 }
@@ -313,12 +333,14 @@ hr {
 	font-family: 'PT Sans', sans-serif;
 	width: 470px;
 	height: 580px;
+	background-color: #fff;
 	display: flex;
-	position: absolute;
+	position: fixed;
 	top: 20%;
-	margin-left: 485px;
+	margin-left: 470px;
 	flex-direction: column;
 	align-items: center;
+	z-index: 100;
 
 }
 
@@ -370,6 +392,71 @@ hr {
 
 	}
 
-@media (max-width: 240px) {
+@media (max-width: 1020px) {
+	.header {
+		height: auto;
+		flex-direction: column;
+	}
+	
+	.header__logo {
+		margin: 0;
+	}
+
+	.contacts {
+		margin: 0;
+		align-self: center;
+	}
+
+	.contacts__submit {
+		margin: auto;
+		float: none;
+	}
+	.menu {
+		height: auto;
+	}
+
+	.navbar {
+		flex-direction: column;
+	}
+
+	.navbar__link {
+		border: none;
+	}
+
+	.main-content {
+		margin-left: 50px;
+		height: auto;
+
+	}
+
+	.main-info__left {
+		margin-right: 5px;
+	}
+
+	.main-info__right {
+		margin-left: 5px;
+	}
+
+
+	.numbering {
+		justify-content: flex-start;
+	}
+
+	.footer {
+		height: auto;
+	}
+
+	.copyright {
+		margin: 0;
+	}
+
+	.footer-logo {
+		margin: 0;
+	}
+
+	.feedback {
+		margin-left: 15%;
+	}
+
 	
 }
